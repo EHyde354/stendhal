@@ -22,7 +22,7 @@ jobs:
       - uses: sarisia/actions-status-discord@v1
         if: failure()
         env:
-          DISCORD_WEBHOOK: ${{ https://discord.com/api/webhooks/1355134354828820652/SKnVGc32GiPrXjw4aP71kvYcKyeriRahg9V8smUr2aXD1JKpB_JEVcIp1uAFeZ2DJEEA }}
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_DEVELOPMENT }}
         with:
           nodetail: true
           title: "Unittest failed"
@@ -30,7 +30,7 @@ jobs:
       - uses: sarisia/actions-status-discord@v1
         if: failure()
         env:
-          DISCORD_WEBHOOK: ${{ https://discord.com/api/webhooks/1355134354828820652/SKnVGc32GiPrXjw4aP71kvYcKyeriRahg9V8smUr2aXD1JKpB_JEVcIp1uAFeZ2DJEEA }}
+          DISCORD_WEBHOOK: ${{secrets.DISCORD_WEBHOOK_DEVLOG }}
         with:
           nodetail: true
           title: "Unittest failed"
